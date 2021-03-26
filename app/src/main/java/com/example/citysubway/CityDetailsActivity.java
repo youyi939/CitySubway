@@ -69,6 +69,9 @@ public class CityDetailsActivity extends AppCompatActivity {
             case R.id.my_btn:
                 Toast.makeText(this, "124", Toast.LENGTH_SHORT).show();
                 break;
+            case android.R.id.home:
+                finish();
+                break;
             default:
                 break;
         }
@@ -92,6 +95,13 @@ public class CityDetailsActivity extends AppCompatActivity {
         linearLayoutManager = new LinearLayoutManager(CityDetailsActivity.this);
         linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         actionBar = getSupportActionBar();
+
+        /**
+         * 设置ActionBar返回按钮
+         */
+        actionBar.setDisplayShowTitleEnabled(true); // 决定左上角图标的右侧是否有向左的小箭头, true
+        actionBar.setDisplayHomeAsUpEnabled(true); // 有小箭头，并且图标可以点击
+        actionBar.setDisplayShowHomeEnabled(false);// 使左上角图标是否显示，如果设成false，则没有程序图标，仅仅就个标题，
 
 
 
